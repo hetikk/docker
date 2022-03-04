@@ -14,4 +14,9 @@ public class SimpleController {
         return ResponseEntity.ok("test");
     }
 
+    @GetMapping("/pong")
+    public ResponseEntity<?> pong() {
+        return ResponseEntity.ok("pong");
+    }
+
 }

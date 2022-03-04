@@ -1,0 +1,26 @@
+version: '3.2'
+
+services:
+
+  service1:
+    image: "${SERVICE1_IMAGE}"
+    container_name: "${SERVICE1_CONTAINER}"
+    ports:
+      - "8001:8001"
+    networks:
+      services-network:
+        aliases:
+          - service1.net
+
+  service2:
+    image: "${SERVICE2_IMAGE}"
+    container_name: "${SERVICE2_CONTAINER}"
+    ports:
+      - "8002:8002"
+    networks:
+      services-network:
+        aliases:
+          - service2.net
+
+networks:
+  services-network:
